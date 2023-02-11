@@ -51,6 +51,10 @@ app.use(cors());
 // adding morgan to log HTTP requests
 app.use(morgan('combined'));
 
+app.get("/", (req, res) => {
+    res.json({"name": "John"});
+});
+
 // defining an endpoint to return all ads
 app.get('/:address', async (req, res) => {
 
